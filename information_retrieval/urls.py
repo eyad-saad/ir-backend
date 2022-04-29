@@ -53,11 +53,11 @@ terms = list(set(terms))
 
 term_vectors = create_index(terms, word_dict)
 
-cache.set('tf_idf', tf_idf, 99999999)
-cache.set('doc_dict', doc_dict, 99999999)
-cache.set('vocab', terms, 99999999)
-cache.set('word_dict', word_dict, 99999999)
-cache.set('term_vectors', term_vectors, 99999999)
+cache.set('tf_idf', tf_idf, None )
+cache.set('doc_dict', doc_dict, None )
+cache.set('vocab', terms, None )
+cache.set('word_dict', word_dict, None )
+cache.set('term_vectors', term_vectors, None )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
