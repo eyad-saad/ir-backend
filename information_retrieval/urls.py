@@ -29,6 +29,8 @@ import docx2txt
 
 from search_engine.ir_models.boolean_model import preprocess_text, create_index, get_document_vectors
 from search_engine.ir_models.vector_model import wordDocFre, get_tf_idf
+import nltk
+nltk.download('punkt')
 
 data_dir = os.path.join(BASE_DIR, 'data')
 word_dict = {}
