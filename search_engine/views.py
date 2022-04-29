@@ -109,6 +109,7 @@ class VectorSpaceQuery(APIView):
         top = vectorSpaceModel(query, docs, tf_idf)
         result = []
         for key in top:
-            result.append({'document_name': key, 'similarity': top[key]})
+            if top[key] > 0:
+                result.append({'document_name': key, 'similarity': top[key]})
         return Response({'result': result})
 
